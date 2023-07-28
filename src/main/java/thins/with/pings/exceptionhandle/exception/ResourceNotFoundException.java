@@ -5,11 +5,12 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.io.Serial;
 
-@ResponseStatus(HttpStatus.UNPROCESSABLE_ENTITY)
-public class ResourceCreationFailedException extends Exception{
+@ResponseStatus(HttpStatus.NOT_FOUND)
+public class ResourceNotFoundException extends Exception{
     @Serial
     private static final long serialVersionUID = 1L;
-    public ResourceCreationFailedException(String message){
+
+    public ResourceNotFoundException(String message){
         super(message);
     }
 }
